@@ -13,6 +13,7 @@
     "@types/node": "^20.11.28",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "git-commit-msg-linter": "^5.0.7",
+    "husky": "^9.0.11",
     "typescript": "^5.4.2"
   }
 }
