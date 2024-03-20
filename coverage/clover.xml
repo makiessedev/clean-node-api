@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1710916699653" clover="3.2.0">
-  <project timestamp="1710916699653" name="All files">
-    <metrics statements="45" coveredstatements="45" conditionals="9" coveredconditionals="9" methods="4" coveredmethods="4" elements="58" coveredelements="58" complexity="0" loc="45" ncloc="45" packages="2" files="2" classes="2"/>
+<coverage generated="1710917001704" clover="3.2.0">
+  <project timestamp="1710917001704" name="All files">
+    <metrics statements="34" coveredstatements="31" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="2" elements="45" coveredelements="40" complexity="0" loc="34" ncloc="34" packages="3" files="3" classes="3"/>
     <package name="controllers">
-      <metrics statements="29" coveredstatements="29" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
+      <metrics statements="28" coveredstatements="28" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
       <file name="signup.ts" path="/home/makiesse/WWW/clean-node-api/src/presentation/controllers/signup.ts">
-        <metrics statements="29" coveredstatements="29" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <metrics statements="28" coveredstatements="28" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -13,50 +13,45 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="7" type="stmt"/>
         <line num="12" count="7" type="stmt"/>
         <line num="13" count="7" type="stmt"/>
         <line num="14" count="7" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="16" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="22" type="cond" truecount="1" falsecount="0"/>
-        <line num="18" count="22" type="stmt"/>
-        <line num="19" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="22" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="22" type="stmt"/>
+        <line num="18" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="3" type="stmt"/>
         <line num="20" count="3" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
+        <line num="21" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="22" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="23" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="helpers">
-      <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="http-helper.ts" path="/home/makiesse/WWW/clean-node-api/src/presentation/helpers/http-helper.ts">
-        <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+    <package name="errors">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/makiesse/WWW/clean-node-api/src/presentation/errors/index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="protocols">
+      <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="email-validator.ts" path="/home/makiesse/WWW/clean-node-api/src/presentation/protocols/email-validator.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
       </file>
     </package>
   </project>
