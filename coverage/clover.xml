@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1710917184281" clover="3.2.0">
-  <project timestamp="1710917184281" name="All files">
-    <metrics statements="29" coveredstatements="26" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="2" elements="40" coveredelements="35" complexity="0" loc="29" ncloc="29" packages="2" files="2" classes="2"/>
+<coverage generated="1710917864560" clover="3.2.0">
+  <project timestamp="1710917864560" name="All files">
+    <metrics statements="32" coveredstatements="29" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="2" elements="43" coveredelements="38" complexity="0" loc="32" ncloc="32" packages="3" files="3" classes="3"/>
     <package name="controllers">
       <metrics statements="26" coveredstatements="26" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
       <file name="signup.ts" path="/home/makiesse/WWW/clean-node-api/src/presentation/controllers/signup.ts">
@@ -34,9 +34,18 @@
         <line num="26" count="1" type="stmt"/>
       </file>
     </package>
+    <package name="errors">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/makiesse/WWW/clean-node-api/src/presentation/errors/index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="protocols">
       <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.ts" path="/home/makiesse/WWW/clean-node-api/src/presentation/protocols/index.ts">
+      <file name="email-validator.ts" path="/home/makiesse/WWW/clean-node-api/src/presentation/protocols/email-validator.ts">
         <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="2" count="0" type="stmt"/>
