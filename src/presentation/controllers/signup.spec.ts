@@ -99,4 +99,23 @@ describe('SignUd Controller', () => {
 
     jest.clearAllMocks()
   })
+
+  it('Should call email validator with correct email', () => {
+    const { sut, emailValidatorStub } = makeSut()
+
+    const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
+
+    const httpRequest = {
+      body: {
+        name: 'John Doe',
+        email: 'john@gmail.com',
+        password: 'johndoepassword',
+        passwordConfirmation: 'johndoepassword'
+      }
+    }
+    sut.handle(httpRequest)
+    expect(isValidSpy).toHaveBeenCalledWith(httpRequest.body.email)
+
+    jest.clearAllMocks()
+  })
 })
