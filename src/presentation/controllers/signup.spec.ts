@@ -1,3 +1,5 @@
+import { AccountModel } from '../../domain/models/account'
+import { AddAccount, AddAccountModel } from '../../domain/use-cases/add-account'
 import { InvalidParamError, MissingParamError, ServerError } from '../errors'
 import { EmailValidator } from '../protocols/email-validator'
 import { SignUpController } from './signup'
@@ -5,16 +7,19 @@ import { SignUpController } from './signup'
 interface SutTypes {
   sut: SignUpController
   emailValidatorStub: EmailValidator
+  addAccountStub: AddAccount
 }
 
 function makeSut (): SutTypes {
   const emailValidatorStub = makeEmailValidator()
+  const addAccountStub = makeAddAccount()
 
-  const sut = new SignUpController(emailValidatorStub)
+  const sut = new SignUpController(emailValidatorStub, addAccountStub)
 
   return {
     sut,
-    emailValidatorStub
+    emailValidatorStub,
+    addAccountStub
   }
 }
 
@@ -24,6 +29,23 @@ function makeEmailValidator (): EmailValidator {
   }
 
   return new EmailValidatorStub()
+}
+
+function makeAddAccount (): AddAccount {
+  class AddAccountStub implements AddAccount {
+    add (account: AddAccountModel): AccountModel {
+      const fakeAccount = {
+        id: 'valid-id',
+        name: 'valid-name',
+        email: 'valid@gmail.com',
+        password: 'valid-password'
+      }
+
+      return fakeAccount
+    }
+  }
+
+  return new AddAccountStub()
 }
 
 describe('SignUd Controller', () => {
@@ -153,6 +175,28 @@ describe('SignUd Controller', () => {
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(500)
     expect(httpResponse.body).toStrictEqual(new ServerError())
+
+    jest.clearAllMocks()
+  })
+  it('Should call AddAccount with correct values', () => {
+    const { sut, addAccountStub } = makeSut()
+
+    const addSpy = jest.spyOn(addAccountStub, 'add')
+
+    const httpRequest = {
+      body: {
+        name: 'John Doe',
+        email: 'john@gmail.com',
+        password: 'johndoepassword',
+        passwordConfirmation: 'johndoepassword'
+      }
+    }
+    sut.handle(httpRequest)
+    expect(addSpy).toHaveBeenCalledWith({
+      name: 'John Doe',
+      email: 'john@gmail.com',
+      password: 'johndoepassword'
+    })
 
     jest.clearAllMocks()
   })
