@@ -198,4 +198,24 @@ describe('SignUd Controller', () => {
 
     jest.clearAllMocks()
   })
+
+  it('Should return 500 if AddAccount throw', () => {
+    const { addAccountStub, sut } = makeSut()
+
+    jest.spyOn(addAccountStub, 'add').mockImplementationOnce(() => { throw new Error() })
+
+    const httpRequest = {
+      body: {
+        name: 'John Doe',
+        email: 'invalid-email@gmail.com',
+        password: 'johndoepassword',
+        passwordConfirmation: 'johndoepassword'
+      }
+    }
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(500)
+    expect(httpResponse.body).toStrictEqual(new ServerError())
+
+    jest.clearAllMocks()
+  })
 })
