@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
-    "test:staged": "jest"
+    "test": "jest --runInBand",
+    "test:unit": "npm test -- --watch -c ./jest-unity-config.ts",
+    "test:e2e": "npm test -- --watch -c ./jest-e2e-config.ts",
+    "test:staged": "npm test -- --findRelatedTest",
+    "test:cov": "npm test -- --coverage"
   },
   "keywords": [],
   "author": "",
