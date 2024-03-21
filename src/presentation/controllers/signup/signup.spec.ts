@@ -218,4 +218,25 @@ describe('SignUd Controller', () => {
 
     jest.clearAllMocks()
   })
+
+  it('Should return 200 if valid data is provided', () => {
+    const { sut } = makeSut()
+
+    const httpRequest = {
+      body: {
+        name: 'valid-name',
+        email: 'valid@gmail.com',
+        password: 'valid-password',
+        passwordConfirmation: 'valid-password'
+      }
+    }
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(200)
+    expect(httpResponse.body).toStrictEqual({
+      id: 'valid-id',
+      name: 'valid-name',
+      email: 'valid@gmail.com',
+      password: 'valid-password'
+    })
+  })
 })
