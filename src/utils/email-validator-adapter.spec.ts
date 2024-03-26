@@ -1,5 +1,5 @@
 import validator from 'validator'
-import { EmailValidatorAdapter } from './email-validator'
+import { EmailValidatorAdapter } from './email-validator-adapter'
 
 function makeSut (): EmailValidatorAdapter {
   return new EmailValidatorAdapter()

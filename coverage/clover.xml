@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1711445462103" clover="3.2.0">
-  <project timestamp="1711445462103" name="All files">
+<coverage generated="1711445592096" clover="3.2.0">
+  <project timestamp="1711445592096" name="All files">
     <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1" elements="10" coveredelements="10" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1"/>
-    <file name="email-validator.ts" path="/home/makiesse/WWW/clean-node-api/src/utils/email-validator.ts">
+    <file name="email-validator-adapter.ts" path="/home/makiesse/WWW/clean-node-api/src/utils/email-validator-adapter.ts">
       <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
