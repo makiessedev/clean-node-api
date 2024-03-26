@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.28",
+    "@types/validator": "^13.11.9",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "git-commit-msg-linter": "^5.0.7",
     "husky": "^9.0.11",
@@ -25,6 +26,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "validator": "^13.11.0"
   }
 }
